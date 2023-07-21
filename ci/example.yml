@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: financial_records
+    config:
+      meta:
+        canva:
+          retention:
+            has_retention_policy: true
+            retention_policy:
+            - policy_ref: "ret_2_2"
+              policy_enabled: true
+              policy_params:
+                user_country: "tax_region"                   
+                tax_date: "tax_period"                   
+                accounting_date: "accounting_period"
